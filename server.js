@@ -5,6 +5,13 @@ const app = express();
 const fs = require('fs');
 const path = require ('path');
 
+// middleware
+app.use(express.static('public'));
+// parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
+app.use(express.json());
+
 app.get('/db/db', (req, res) => {
     res.json(notes);
 });
