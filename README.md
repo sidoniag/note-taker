@@ -21,4 +21,4 @@ Run npm install to install necessary packages
 
 
 ## Questions
-Any questions can be emailed to me at: <sidoniag@gmail.com>
+Any questions can be emailed to me directly: <sidoniag@gmail.com>

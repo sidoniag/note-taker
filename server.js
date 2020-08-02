@@ -1,8 +1,9 @@
 const express = require('express');
+const notes = require('.db/db.json');
 const PORT = process.env.PORT || 3001;
 const app = express();
-
-const notes = require('.db/db.json');
+const fs = require('fs');
+const path = require ('path');
 
 app.get('/db/db', (req, res) => {
     res.json(notes);
