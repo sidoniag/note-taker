@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-* [`Description`] (#description)
+* [`Description`](#description)
 * [`Technologies`](#technologies)
 * [`Screenshots`](#screenshots)
 * [`Deployment`](#deployment)
