@@ -65,7 +65,7 @@ app.get('/', (req, res) => {
 
 // connect notes.html file
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
+    res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
 app.listen(PORT, () => {
