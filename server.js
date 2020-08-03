@@ -58,6 +58,25 @@ app.get('/api/notes', (req, res) => {
     res.json(results);
 });
 
+app.get('/api/notes/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
+    if (result) {
+        res.json(result);
+    } else {
+        res.send(404);
+    }
+})
+
+app.post('/api/notes', (req, res) => {
+    req.body.id = uniqid();
+    if(!validateNote(req.body)) {
+        res.status(400).send('This note is not properly formatted.')
+    } else {
+        const newNote = createNewNote(req.body, notes);
+        res.json(newNote);
+    }
+})
+
 // connect index.html file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
