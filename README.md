@@ -24,16 +24,16 @@ Run npm install to install required packages
 
 ## Screenshots
 Start page:
-![image of start page]
-(public/assets/css/images/note_start.png)
+![Start page]
+(./public/assets/css/images/note_start.png)
 
 Notes page:
-![image of notes page]
-(public/assets/css/images/note_page.png)
+![Notes page]
+(./public/assets/css/images/note_page.png)
 
 Notes API: 
-![image of notes api]
-(public/assets/css/images/notes_api.png)
+![Api image]
+(./public/assets/css/images/notes_api.png)
 
 ## Deployment
 
