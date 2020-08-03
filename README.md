@@ -25,15 +25,15 @@ Run npm install to install required packages
 ## Screenshots
 Start page:
 ![image of start page]
-(https://github.com/sidoniag/note-taker/blob/develop/public/assets/css/images/note_start.png)
+(public/assets/css/images/note_start.png)
 
 Notes page:
 ![image of notes page]
-(https://github.com/sidoniag/note-taker/blob/develop/public/assets/css/images/note_page.png)
+(public/assets/css/images/note_page.png)
 
 Notes API: 
 ![image of notes api]
-(https://github.com/sidoniag/note-taker/blob/develop/public/assets/css/images/notes_api.png)
+(public/assets/css/images/notes_api.png)
 
 ## Deployment
 
