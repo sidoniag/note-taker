@@ -15,12 +15,12 @@ An application that allows the user to add, save, and delete notes. Using the ap
 Run npm install to install required packages
 
 ## Technologies
-HTML
-CSS/Bootstrap
-Node
-JS
-Express.js
-Uniqid - NPM Package
+* HTML
+* CSS/Bootstrap
+* Node
+* JS
+* Express.js
+* Uniqid - NPM Package
 
 ## Screenshots
 
