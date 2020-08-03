@@ -1,9 +1,13 @@
 const express = require('express');
 const notes = require('./db/db.json');
+var uniqid = require('uniqid');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
+
 const fs = require('fs');
 const path = require ('path');
+
 
 // middleware
 app.use(express.static('public'));
@@ -24,8 +28,9 @@ function filterByQuery(query, notesArray) {
     return filteredResults;
 }
 
-function findById(id, notesArray) {
-    const result = notesArray.filter(notes => notes.id === id)[0];
+
+function findById(id, notes) {
+    const result = notes.filter(notes => notes.id === id)[0];
     return result;
 }
 
@@ -40,10 +45,10 @@ function createNewNote(body, notesArray) {
 }
 
 function validateNote(note) {
-    if (!notes.title || typeof notes.title !== 'string') {
+    if (!notes.title || typeof note.title !== 'string') {
         return false;
     }
-    if (!notes.text || typeof notes.text !== 'string') {
+    if (!notes.text || typeof note.text !== 'string') {
         return false;
     }
     return true;
@@ -60,29 +65,28 @@ app.get('/api/notes', (req, res) => {
 
 app.get('/api/notes/:id', (req, res) => {
     const result = findById(req.params.id, notes);
-    if (result) {
         res.json(result);
-    } else {
-        res.send(404);
-    }
 })
 
 app.post('/api/notes', (req, res) => {
     req.body.id = uniqid();
+
     if(!validateNote(req.body)) {
         res.status(400).send('This note is not properly formatted.')
     } else {
-        const newNote = createNewNote(req.body, notes);
-        res.json(newNote);
+        const notes = createNewNote(req.body, notes);
+        res.json(notes);
     }
 })
 
-// connect index.html file
+app.delete('')
+
+// // connect index.html file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// connect notes.html file
+// // connect notes.html file
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
