@@ -23,7 +23,14 @@ Run npm install to install required packages
 * Uniqid - NPM Package
 
 ## Screenshots
+Start page:
+![image of start page]
 
+Notes page:
+![image of notes page]
+
+Notes API: 
+![image of notes api]
 
 ## Deployment
 
@@ -31,4 +38,5 @@ Run npm install to install required packages
 ## Questions
 Visit my github
 <https://github.com/sidoniag>
+
 Any questions can be emailed to me directly: <sidoniag@gmail.com>
