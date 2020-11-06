@@ -18,6 +18,10 @@ This application acts as a digital note pad. A place to track small, or big to-d
 
 <img src="./note_taker_home.png">
 
+## Deployment
+
+[GitHub Deploy](https://sidoniag.github.io/note-taker/)
+
 ## Questions
 Visit my [github](https://github.com/sidoniag)<br>
 Questions here: <seekersig@gmail.com>
